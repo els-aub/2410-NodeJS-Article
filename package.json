@@ -18,6 +18,7 @@
   "homepage": "https://github.com/els-aub/2410-NodeJS-Article#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.15.0"
   }
 }
