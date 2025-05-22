@@ -114,13 +114,13 @@ const article = await Article.findOne({uuid : uuid});
 
 // CAS : article pas trouvé 
 if (!article){
-    return res.json({message:`Aucun article ayant l'uuid ${uuid}`});
+    return res.json({ code : "702", message : "Impossible de supprimer un article dont l'uuid n'existe pas", data : null});
 }
      
 // Supprimer élément
 await Article.findOneAndDelete({uuid : uuid});
 
-return res.json({message:`Article supprimé avec succès : ${uuid}`});    
+return res.json({ code : "200", message : `L'article ${uuid} a été supprimé avec succès", data : article`});    
 });
 
 
